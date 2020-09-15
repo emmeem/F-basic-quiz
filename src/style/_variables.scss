@@ -9,9 +9,10 @@ $gray-dark: #343a40 !default;
 $black: #000 !default;
 
 $primary-color: #e55b50 !default;
-$body-bg: #e8e9e8 !default;
+$body-bg: white !default;
 $color-base: $gray-dark !default;
 $link-color: $gray-dark !default;
 $link-hover-color: lighten($link-color, 15%) !default;
 
 $image-size: 100px;
+

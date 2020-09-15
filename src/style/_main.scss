@@ -1,0 +1,38 @@
+.main-content {
+  width: 80%;
+  margin-top: 100px;
+  margin-left: 10%;
+  background-color: $body-bg;
+}
+main {
+    padding: 20px;
+}
+
+.about-me,
+.education{
+    color: $primary-color;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.experience {
+    margin-top: 12px;
+}
+
+.experience li {
+    display: flex;
+    margin: 10px 0;
+}
+
+.describe-content {
+    width: 90%;
+    background-color: $gray-light;
+    display: flex;
+    flex-direction: column;
+    padding: 8px; 
+    margin-left: 5% 
+}
+
+.title {
+    font-weight: bolder;
+}

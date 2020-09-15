@@ -1,4 +1,24 @@
 
-.avator {
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-  }
+.avatar {
+    margin-top: -50px;
+    width: $image-size;
+    height: $image-size;
+    border-radius: 50px;
+}
+
+.hello {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.introduce {
+    font-weight: bolder;
+    font-size: 18px;
+}

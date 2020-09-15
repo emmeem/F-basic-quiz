@@ -27,7 +27,7 @@ const getEducations = (id) => {
           <span class="year">${data.year}</span>
           <section class="describe-content">
             <span class="title">${data.title}</span>
-              <p class="describe">${data.description}</p>
+            <p class="describe">${data.description}</p>
           </section>
         </li>`
         )})
