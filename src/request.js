@@ -23,6 +23,7 @@ const getEducations = (id) => {
   })
     .then((response) => response.json())
     .then((element) => {
+      element.sort((a,b)=> a.year-b.year)
       element.forEach((data) => {
         $("ul").append(
           `<li>
