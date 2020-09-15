@@ -1,7 +1,7 @@
 const url = "http://localhost:8080/users/";
 
 const introduce = (name, age) => {
-    return `MY NAME IS ${name} ${age} AND THIS IS MY RESUME/CV`;
+    return `MY NAME IS ${name} ${age}YO AND THIS IS MY RESUME/CV`;
 }
 
 const getUsers = (id) => {
