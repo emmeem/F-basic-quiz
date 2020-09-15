@@ -1,11 +1,9 @@
-import {getUsers,getEducations} from '../request'
+import {getUsers,getEducations} from '../app'
 
 jest.mock("../request")
 
-test("get users info", async () => {
+test("should call getusers ", async () => {
   const id = 1;
-  getUsers.mockImplementation(() => {});
-  getUsers(id);
      
   expect(getUsers).toHaveBeenCalled();
   expect(getUsers).toHaveBeenCalledTimes(1);
@@ -14,9 +12,7 @@ test("get users info", async () => {
 
   test("get educations", async () => {
     const id = 1;
-    getEducations.mockImplementation(()=>{});
-    getEducations(id);
-    
+
     expect(getEducations).toHaveBeenCalled();
     expect(getEducations).toHaveBeenCalledTimes(1);
   });
