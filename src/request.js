@@ -10,6 +10,7 @@ const getUsers = (id) => {
   })
     .then((response) => response.json())
     .then((data) => {
+      // TODO fetch和render耦合在一起，可以进行拆分
       $("img").attr("src", data.avatar);
       $(".introduce").html(introduce(data.name, data.age));
       $(".describe").html(data.description);
