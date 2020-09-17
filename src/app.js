@@ -3,7 +3,10 @@ import { getEducations, getUsers } from "./request";
 
 const path = window.location.pathname.split("/");
 const id = path[2];
-getUsers(id);
-getEducations(id);
+const getUsersInfo = (index) => getUsers(index);
+const getEducationsInfo = (index) => getEducations(index);
 
-export { getUsers, getEducations };
+getUsersInfo(id);
+getEducationsInfo(id);
+
+export { getUsersInfo, getEducationsInfo };
