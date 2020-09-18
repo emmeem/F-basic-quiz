@@ -1,8 +1,6 @@
-const url = "http://localhost:8080/users/";
+import {renderHeader, appendToUl} from "./render"
 
-const introduce = (name, age) => {
-  return `MY NAME IS ${name} ${age}YO AND THIS IS MY RESUME/CV`;
-};
+const url = "http://localhost:8080/users/";
 
 const getUsers = (id) => {
   return fetch(`${url}${id}`, {
@@ -10,13 +8,13 @@ const getUsers = (id) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      // TODO fetch和render耦合在一起，可以进行拆分
-      $("img").attr("src", data.avatar);
-      $(".introduce").html(introduce(data.name, data.age));
-      $(".describe").html(data.description);
+      return renderHeader(data.avatar, data.name, 
+        data.age, data.description)
     })
     .catch((err) => console.log(err));
 };
+
+
 
 const getEducations = (id) => {
   return fetch(`${url}${id}/educations`, {
@@ -26,18 +24,10 @@ const getEducations = (id) => {
     .then((element) => {
       element.sort((a, b) => a.year - b.year);
       element.forEach((data) => {
-        $("ul").append(
-          `<li>
-          <span class="year">${data.year}</span>
-          <section class="describe-content">
-            <span class="title">${data.title}</span>
-            <p class="describe">${data.description}</p>
-          </section>
-        </li>`
-        );
-      });
-    })
-    .catch((err) => console.log(err));
+        return appendToUl(data.year,data.title,data.description)}
+        );}
+      )
+  .catch((err) => console.log(err));
 };
 
 export { getUsers, getEducations };

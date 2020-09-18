@@ -1,14 +1,14 @@
 import "./style/index.scss";
 import { getEducations, getUsers } from "./request";
 
-// TODO url是 http://localhost:1234/soga/1 的是不是也是能访问到的？
-const path = window.location.pathname.split("/");
-const id = path[2];
-// TODO 这里参数命名index有点歧义
-const getUsersInfo = (index) => getUsers(index);
-const getEducationsInfo = (index) => getEducations(index);
+const getUsersInfo = (id) => getUsers(id);
+const getEducationsInfo = (id) => getEducations(id);
 
-getUsersInfo(id);
-getEducationsInfo(id);
+const path = window.location.pathname.split("/");
+if(path[1] === "users") {
+    const id = path[2];
+    getUsersInfo(id);
+    getEducationsInfo(id);
+}
 
 export { getUsersInfo, getEducationsInfo };
